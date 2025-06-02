@@ -2,8 +2,10 @@ import logging
 import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from dotenv import load_dotenv
 
-# Получаем токен из переменных окружения
+# Загружаем переменные окружения из .env
+load_dotenv()
 TOKEN = os.environ.get('TOKEN')
 
 logging.basicConfig(
